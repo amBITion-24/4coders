@@ -1,0 +1,12 @@
+[package]
+name = "soroban-voting-system"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+soroban-sdk = { version = "21.1.1", default-features = false }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dev-dependencies]
