@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { retrievePublicKey, checkConnection } from "../services/freighterServices.js";
 import { createProposal, castVote, endVoting, getProposalResults, getAllProposals, fetchPoll } from "../services/stellarServices.js";
+
 function Tester() {
   const [connect, setConnect] = useState("Connect");
   const [publicKey, setPublicKey] = useState("Wallet not Connected..");
@@ -40,10 +41,10 @@ function Tester() {
       <ul>
         {proposals.map((proposal, index) => (
           <li key={index}>
-            Proposal ID: {proposal[0]} <br />
-            Title: {proposal[1]} <br />
-            Description: {proposal[2]} <br />
-            Ended: {proposal[3] ? 'Yes' : 'No'}
+            <strong>Proposal ID:</strong> {proposal[0]} <br />
+            <strong>Title:</strong> {proposal[1]} <br />
+            <strong>Description:</strong> {proposal[2]} <br />
+            <strong>Ended:</strong> {proposal[3] ? 'Yes' : 'No'}
           </li>
         ))}
       </ul>
