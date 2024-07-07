@@ -13,7 +13,7 @@ import { getPublicKey } from '@stellar/freighter-api';
 
 // Use Vite's environment variables
 const rpcUrl = 'https://soroban-testnet.stellar.org';
-const contractAddress = 'CDF2IEMOKVYTSUXQGJYRMEDTW6GXH7CSBJMXJ2YNXDOTK4E3C5YY3XJU';
+const contractAddress = 'CC5FQPCIMTSBK7O2Y7432AKWT4QP6ZMPHEZ2LC3W4ELXB3VN4XKPXT6O';
 
 const stringToSymbol = (value) => {
   return nativeToScVal(value, { type: "symbol" });
@@ -79,12 +79,12 @@ async function contractInt(caller, functName, values) {
 
 // Functions to interact with the contract
 
-export const createProposal = async (title, description, ownerSecret) => {
+export const createProposal = async (title, description) => {
   try {
       const caller = await getPublicKey();
       console.log('Caller public key for createProposal:', caller);
-      const ownerKeypair = Keypair.fromSecret(ownerSecret);
-      const values = [stringToSymbol(title), stringToSymbol(description), accountToScVal(ownerKeypair.publicKey())];
+      const ownerKeypair =await getPublicKey();
+      const values = [stringToSymbol(title), stringToSymbol(description), accountToScVal(ownerKeypair)];
       const result = await contractInt(caller, 'create_proposal', values);
       return result;
   } catch (err) {

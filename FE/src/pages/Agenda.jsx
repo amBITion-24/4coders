@@ -3,11 +3,11 @@ import Card from '../components/home/Card'
 import Footer from '../components/home/Footer'
 import NavbarHome from '../components/home/NavbarHome'
 
-const AddCards = () => {
+const AddCards = (prop) => {
   return (
     <div>
       <NavbarHome></NavbarHome>
-        <Card></Card>
+        <Card publickey={prop}></Card>
         <Footer></Footer>
     </div>
   )

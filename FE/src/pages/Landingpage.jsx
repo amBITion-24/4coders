@@ -7,10 +7,10 @@ import NavbarHome from '../components/home/NavbarHome';
 import StepsSection from '../components/home/StepsSection';
 import './landing.css'
 
-const Landingpage = () => {
+const Landingpage = (props) => {
   return (
     <div className="App">
-      <NavbarHome />
+      <NavbarHome keyy={props}/>
     <HeroSection></HeroSection>
       <FeatureCardsSection />
       <CustomisationSection />

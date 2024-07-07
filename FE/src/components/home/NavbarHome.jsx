@@ -2,7 +2,7 @@ import React from 'react';
 import LOGO from '../../assets/img/netselector.png';
 
 import { useNavigate } from 'react-router-dom';
-const NavbarHome = () => {
+const NavbarHome = (props) => {
     const navigate=useNavigate();
     const handleClick = ()=>{
         navigate('/newProposal')
