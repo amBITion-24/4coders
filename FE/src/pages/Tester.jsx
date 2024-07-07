@@ -1,33 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { retrievePublicKey, checkConnection } from "../services/freighterServices.js";
 import { createProposal, castVote, endVoting, getProposalResults, getAllProposals, fetchPoll } from "../services/stellarServices.js";
-const fetchData = async () => {
-  try {
-    const response = await fetch('https://localhost:3000/api/data', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error('Fetch error:', error);
-  }
-};
 function Tester() {
   const [connect, setConnect] = useState("Connect");
   const [publicKey, setPublicKey] = useState("Wallet not Connected..");
   const [proposals, setProposals] = useState([]);
-
-  useEffect(()=>{
-    fetchData();
-  },[]);
 
   useEffect(() => {
     const connectWallet = async () => {
