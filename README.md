@@ -10,7 +10,7 @@ This project is designed to create a secure, transparent, and tamper-proof votin
 ## Authors
 
 - Abhishek Agarwal
-- Aditya Mishra
+- Aditya Mishra(Team Lead)
 - Aditya Umesh
 - Adwiteya Juniwal
 
