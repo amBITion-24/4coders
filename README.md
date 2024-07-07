@@ -1,5 +1,9 @@
 # 4coders
 
+## What is Decentralized Voting System?
+
+https://github.com/amBITion-24/4coders/assets/147623950/e764c415-02eb-47b2-9981-e156306af0c2
+
 
 ## Decentralised Voting system(NetElect)
 
