@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@stellar/stellar-sdk": "^12.1.0",
+    "dotenv": "^16.4.5"
+  }
+}

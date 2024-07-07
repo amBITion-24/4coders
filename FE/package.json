@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@stellar/freighter-api": "^2.0.0",
+    "dotenv": "^16.4.5",
+    "freighter": "^1.1.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "stellar-sdk": "^12.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
